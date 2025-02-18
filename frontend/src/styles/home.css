@@ -1,0 +1,183 @@
+/* Estilos generales del dashboard */
+.dashboard-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  color: #a693c9;
+}
+
+.dashboard-buttons {
+  margin-top: 20px;
+}
+
+.dashboard-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ea97ff, #c875ff);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.dashboard-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(255, 117, 140, 0.5);
+}
+
+/* Sección de Libros en Tendencia */
+.trending-books {
+  margin-top: 50px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.trending-books h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #a693c9;
+}
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  white-space: nowrap;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  animation: slide 20s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.book-card {
+  margin-right: 15px;
+  margin-top: 10px;
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 250px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.book-card:hover {
+  transform: scale(1.1);
+}
+
+.book-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.book-card h3 {
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.book-card p {
+  font-size: 14px;
+  color: #000000;
+}
+
+/* Libros en Tendencia Mundial - Color Turquesa */
+.trending-books .book-card {
+  background: #4e72f6;
+  color: rgb(0, 0, 0);
+}
+
+/* Mejores Calificados - Letras Doradas */
+.best-rated-books .book-card{
+  background: #c19bd6;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+/* Mejores Calificados - Letras Doradas */
+.best-rated-books .book-card{
+  background-color: #89f788;
+  color: gold;
+  font-weight: bold;
+}
+
+
+
+/* Libros Mágicos - Nuevo Efecto Sutil */
+.magical-books .book-card {
+  background: linear-gradient(90deg, rgb(250, 103, 255), rgb(185, 132, 250), rgb(241, 95, 217));
+  color: white;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.magical-books .book-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.8);
+}
+
+/* Libros Aterradores - Mensaje de Susto */
+.horror-books {
+  position: relative;
+}
+
+.horror-books .book-card{
+  background-color: rgb(244, 78, 78);
+}
+
+@keyframes dripping {
+  0% { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 1; }
+  50% { clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 90%); opacity: 0.8; }
+  100% { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 0; }
+}
+
+.horror-warning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  color: red;
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: dripping 3s ease-out forwards;
+  text-shadow: 0 0 20px red;
+}
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Libros Mexicanos - Degradado Verde, Blanco y Rojo */
+.mexican-books .book-card{
+  background: linear-gradient(90deg, green, white, red);
+  padding: 20px;
+  border-radius: 10px;
+}
+

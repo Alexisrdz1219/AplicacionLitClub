@@ -1,0 +1,446 @@
+/* Paleta de Colores 
+#e7e7e7
+#c4aecf
+#232232
+#5c2c7b
+#1e81a6
+*/
+
+body{
+  background-color: #000000;
+  font-family: 'Varela Round', sans-serif;
+}
+#img{
+  background-image: url(https://estaticos-cdn.prensaiberica.es/clip/f170846a-e098-4bdd-b1c9-13296b346986_alta-libre-aspect-ratio_default_0.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+.presentation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 500px;
+    text-align: left;
+    background-color: #000000;
+    color: #c4aecf;
+    padding: 4rem 8%;
+    position: relative;
+    overflow: hidden;
+    
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  .text-purple {
+    background: linear-gradient(90deg, #c4aecf, #cd94e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  
+  
+  
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(138, 43, 226, 0.6);
+    }
+    50% {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(138, 43, 226, 0.9);
+    }
+    100% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(138, 43, 226, 0.6);
+    }
+  }
+  
+  .magic-text {
+    display: inline-block;
+    background: linear-gradient(90deg, #ffffff, #d8b9ff, #c39de7, #b986e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    animation: glow 2s infinite alternate;
+  }
+  
+  /* Logo más grande y bien alineado */
+  .logo-container {
+    flex-shrink: 0;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 350px; /* Logo más grande */
+    height: auto;
+    max-width: 100%;
+    animation: fadeInScale 1s ease-out;
+  }
+  
+  /* Botones más grandes y con más espacio */
+  .buttons {
+    margin-top: 3rem;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .button {
+    padding: 18px 36px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  
+  .button-primary {
+    background-color: #232232;
+    color: #c19bd6;
+  }
+  
+  .button-primary:hover {
+    background-color: #232232;
+  }
+  
+  .button-secondary {
+    background-color: #c19bd6;
+    color: black;
+  }
+  
+  .button-secondary:hover {
+    background-color: #232232;
+    color: #bf97d0;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInScale {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Destellos animados */
+  .glow {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: white;
+    opacity: 0.2;
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: float 3s infinite alternate ease-in-out;
+  }
+  
+  @keyframes float {
+    from {
+      transform: translate(-50px, -50px) scale(0.7);
+    }
+    to {
+      transform: translate(50px, 50px) scale(1);
+    }
+  }
+  
+  /* Sección de libros recomendados */
+.book-preview {
+  text-align: center;
+  padding: 4rem 5%;
+  background: rgb(0, 0, 0);
+}
+
+.book-preview-title {
+  font-size: 2.8rem;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #1e81a6, #bf97d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Carrusel de libros */
+.book-carousel {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+}
+
+/* Cada tarjeta de libro */
+.book-card {
+  width: 180px;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  scroll-snap-align: center;
+}
+
+/* Imagen de portada */
+.book-cover {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Título del libro */
+.book-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #222;
+}
+
+/* Autor del libro */
+.book-author {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Sección de comentarios */
+.user-comments {
+  text-align: center;
+  padding: 4rem 5%;
+  background: #000000;
+}
+
+.comments-title {
+  font-size: 2.8rem;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #1e81a6, #bf97d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Contenedor de comentarios */
+.comments-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Tarjeta de comentario */
+.comment-card {
+  width: 300px;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Avatar del usuario */
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Nombre del usuario */
+.user-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Comentario */
+.user-comment {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* Animación de aparición */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contenedor principal */
+.about-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 60px auto;
+  background: linear-gradient(135deg, #000000, #000000);
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  color: white;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+/* Contenido de texto */
+.about-text {
+  flex: 1;
+  padding-right: 30px;
+}
+
+/* Título con efecto moderno */
+.about-title {
+  font-size: 2.8rem;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: bold;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #1e81a6, #bf97d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Descripción inspiradora */
+.about-description {
+  font-size: 1.3rem;
+  font-family: 'Varela Round', sans-serif;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Botón CTA atractivo */
+.about-cta {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: #232232;
+  color: #b986e2;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.about-cta:hover {
+  background: #fff;
+  color: #1e81a6;
+  transform: scale(1.05);
+}
+
+/* Imagen con animación */
+.about-image img {
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Sección de Funcionalidades */
+.app-features {
+  text-align: center;
+  padding: 4rem 5%;
+  background: #000000;
+}
+
+.features-title {
+  font-size: 2.8rem;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #1e81a6, #bf97d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Contenedor de tarjetas de funcionalidades */
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Tarjeta de funcionalidad */
+.feature-card {
+  width: 280px;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Título de la funcionalidad */
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+/* Descripción de la funcionalidad */
+.feature-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: #222;
+  color: white;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #facc15;
+}
+
+body {
+  font-family: 'Varela Round', sans-serif;
+}

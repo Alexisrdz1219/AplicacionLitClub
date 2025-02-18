@@ -1,0 +1,106 @@
+/* Estilos generales del catálogo de libros */
+.catalog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+  background-color: #f4e3c1;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.catalog-container h1 {
+  font-size: 36px;
+  color: #5a3e1b;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar {
+  width: 80%;
+  padding: 12px;
+  border-radius: 20px;
+  border: 2px solid #5a3e1b;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s;
+}
+
+.search-bar:focus {
+  box-shadow: 0 0 10px rgba(90, 62, 27, 0.5);
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.book-card {
+  background: #fff3e0;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  animation: scaleIn 0.5s ease-in-out;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.book-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.book-card h2 {
+  font-size: 22px;
+  color: #5a3e1b;
+}
+
+.book-card p {
+  font-size: 16px;
+  color: #333;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.button {
+  padding: 10px 15px;
+  background: #5a3e1b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  background: #3e2a14;
+  transform: scale(1.05);
+}
+
+.button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

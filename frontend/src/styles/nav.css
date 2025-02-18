@@ -1,0 +1,96 @@
+/* Importar la fuente Varela Round */
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+/* Estilos generales del navbar */
+.nav {
+  position: block;
+  top: 0;
+  left: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(255, 255, 255); /* Transparente */
+  backdrop-filter: blur(10px); /* Desenfoque para mejor legibilidad */
+  padding: 0 20px;
+  font-family: "Varela Round", sans-serif;
+  z-index: 1000;
+}
+
+/* Estilos del logo */
+.logo {
+  font-size: 20px;
+  
+  color: #292b41;
+}
+
+/* Contenedor de los botones de navegación */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Enlaces de navegación */
+.nav-link {
+  text-decoration: none;
+  color: #292b41;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #00f2fe;
+}
+
+/* Botón de perfil con icono */
+.btn-profile {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #292b41;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.btn-profile:hover {
+  opacity: 0.7;
+}
+
+/* Ícono del perfil */
+.btn-profile i {
+  font-size: 1.3rem;
+  margin-left: 5px;
+}
+
+/* Estilos de los botones de inicio de sesión y registro */
+.btn-login,
+.btn-register {
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-login {
+  background: rgba(0, 242, 254, 0.2);
+  color: #292b41;
+}
+
+.btn-login:hover {
+  background: #00f2fe;
+  color: black;
+}
+
+.btn-register {
+  background: rgba(255, 65, 108, 0.2);
+  color: #292b41;
+}
+
+.btn-register:hover {
+  background: #ff416c;
+  color: black;
+}

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* Animación de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contenedor principal para centrar */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura completa de la pantalla */
+  background-image: url(../assets/rg.gif);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+/* Contenedor del formulario */
+.register-form {
+  max-width: 400px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Estilo de los inputs */
+.register-form input {
+  width: 80%;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 1rem;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.register-form input:focus {
+  border-color: #a693c9;
+  box-shadow: 0 0 8px rgba(255, 221, 87, 0.5);
+}
+
+/* Botón atractivo */
+.register-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: #232232;
+  color: #c19bd6;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.register-form button:hover {
+  background: #232232;
+  transform: scale(1.05);
+}
